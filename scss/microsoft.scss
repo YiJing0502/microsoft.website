@@ -1,0 +1,904 @@
+// css reset
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// 變數
+$font-family-base: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// 變數-font-size
+$small-font: 13px;
+// 變數-color
+$white: #fff;
+$black: #000;
+
+// 通用設定
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    color: $black;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// container
+.container {
+    margin: 0 auto;
+    max-width: calc(1600px + 10%);
+    padding: 0 5%;
+
+    @media (max-width: 1083px) {
+        padding: 0;
+
+    }
+}
+
+
+// font
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @media (min-width: 1084px) {
+        font-size: 1.8125rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 2.3125rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+h3 {
+    font-size: 1.3125rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    @media (min-width: 1084px) {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 1.8125rem;
+        margin-bottom: 1rem;
+    }
+}
+
+// a
+a {
+    text-decoration: none;
+    color: #0067b8;
+}
+
+.nav-a {
+    font-size: 11px;
+    line-height: 16px;
+    color: #616161;
+    text-decoration: none;
+    float: left;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.de-none {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// nav
+.nav {
+    margin: 0 auto;
+    max-width: calc(1600px + 10%);
+    padding: 0 5%;
+}
+
+// icon
+.fa-solid,
+.fa-regular {
+    font-size: 18px;
+}
+
+.bottom-line {
+    border-bottom: 3px solid #000;
+}
+
+// padding
+.link-group {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.p-0-12px {
+    padding: 0 12px;
+}
+
+.p-normal {
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.pt-1 {
+    padding-top: 1rem;
+}
+
+// margin
+.rwd-m-3 {
+    margin: 3rem auto;
+
+    @media (max-width: 859px) {
+        margin: 1rem 0;
+    }
+}
+
+.m-t-0dot5 {
+    margin-top: 0.5rem;
+}
+
+.m-r-24 {
+    margin-right: 24px;
+}
+
+.m-b-0dot5 {
+    margin-bottom: 0.5rem;
+}
+
+.m-b-1dot5 {
+    margin-bottom: 1.5rem;
+}
+
+.m-b-3 {
+    margin-bottom: 3rem;
+}
+
+// flex
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.block {
+    display: block;
+}
+
+// 定位
+.por {
+    position: relative;
+}
+
+.poa {
+    position: absolute;
+}
+
+.f-left {
+    float: left;
+}
+
+// button
+.block-link {
+    padding: 10px 12px;
+    background-color: rgb(0, 103, 184);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.125rem;
+    font-weight: 600;
+
+    &:hover {
+        background-color: rgb(0, 103, 164);
+    }
+}
+
+.por-a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.por-a::after {
+    position: absolute;
+    content: ">";
+    transform: translateX(10px);
+}
+
+.por-a:hover::after {
+    transition: all 0.65s 0.1s;
+    transform: translateX(15px);
+}
+
+.por-a:not(:hover)::after {
+    transition: all 0.65s 0.1s;
+    transform: translateX(10px);
+}
+
+// 同一層又有class的寫法
+nav.container-normal {
+    height: 54px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    background-color: $white;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-around;
+    // font
+    font-size: $small-font;
+
+    @media (max-width: 859px) {
+        padding: 0 3.5%;
+    }
+
+    @media (max-width: 540px) {
+        padding: 0 2%;
+    }
+
+    ul.ham-small {
+        .ham-menu {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 859px) {
+            .ham-menu {
+                // 很重要，因為lable是行內元素
+                display: block;
+                width: 22px;
+                height: 22px;
+                margin-top: 16px;
+                background-image: url(../img/ham-menu-1.png);
+                background-size: cover;
+            }
+
+            .mobile-menu {
+                top: 60px;
+                left: 0px;
+                width: 100%;
+                background: #f2f2f2;
+                border-bottom: 1px solid #000;
+
+                li {
+                    border-bottom: 1px solid #e6e6e6;
+                    padding: 20px 15px;
+                    margin: 1px 0;
+                    font-size: 15px;
+
+                    // 按住後停留在上面，跟active不同，active是按一下但是不會停留
+                    &:focus {
+                        border: 1px dashed #000;
+                    }
+
+                    i {
+                        float: right;
+
+                        &:nth-of-type(2) {
+                            display: none;
+                        }
+                    }
+                }
+
+                a {
+                    color: #262626;
+
+                }
+
+                .sub-dropdown-menu {
+                    display: none;
+                }
+
+                .chevron-switch:checked+label .sub-dropdown-menu,
+                .chevron-switch:checked+label li i:nth-of-type(2) {
+                    // 用＋選唯一的開關
+                    display: block;
+                }
+
+                .chevron-switch:checked+label li i:nth-of-type(1) {
+                    display: none;
+                }
+
+            }
+
+
+            #ham-menu-switch:checked+.ham-menu {
+                background-image: url(../img/ham-menu-2.png);
+                width: 22px;
+                height: 25px;
+                margin-top: 16px;
+            }
+
+            #ham-menu-switch:checked~.mobile-menu {
+                display: block;
+                z-index: 2;
+            }
+
+            #ham-menu-switch:not(:checked)~.mobile-menu {
+                display: none;
+            }
+        }
+    }
+
+    .logo {
+        padding: 16px 6px 16px 10px;
+        margin-right: 5px;
+
+        img {
+            width: 108px;
+        }
+
+        @media (max-width: 859px) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .pc-menu,
+    .func-menu {
+        // width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul.pc-menu {
+        margin-left: 10px;
+
+        li {
+            a {
+                &:hover {
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+
+        @media (max-width: 859px) {
+            display: none;
+        }
+    }
+
+    ul.func-menu {
+        margin-left: auto;
+
+        li {
+
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3) {
+                span {
+                    &:hover {
+                        border-bottom: 2px solid #000;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1400px) {
+            span.font-none {
+                display: none;
+            }
+
+            li {
+                a {
+                    span.font-none {
+                        display: none;
+                    }
+                }
+
+            }
+        }
+
+        @media (max-width: 859px) {
+            .nav-search {
+                position: absolute;
+                left: 70px;
+            }
+
+        }
+
+        @media (max-width: 540px) {
+            .nav-search {
+                left: 40px;
+            }
+
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin-top: 1px;
+        padding: 16px 8px 10px;
+        outline-offset: -2px;
+
+        a {
+            color: #262626;
+            font-size: $small-font + 1;
+        }
+    }
+
+    .all-micro {
+        display: flex;
+        margin-top: 10px;
+
+        span {
+            margin-right: 10px;
+        }
+
+        i {
+            display: block;
+        }
+
+        @media (max-width: 859px) {
+            display: none;
+        }
+
+        .all-menu {
+            padding: 20px 20px 18px 15px;
+            margin-top: -15px;
+            width: 142px;
+            cursor: pointer;
+        }
+
+        .inside-menu {
+            display: none;
+            background: #f2f2f2;
+            top: 56px;
+            right: 100px;
+            z-index: 2;
+
+            .main-nav {
+                width: 100%;
+                max-width: 1228px;
+
+                ul {
+                    padding: 0 12px;
+                    flex: 1 1 160px;
+
+                    h4 {
+                        color: #000;
+                        padding: 18px 0 18px;
+                        font-weight: 600;
+                    }
+
+                    li {
+                        padding: 12px 0 12px;
+
+                        a {
+                            font-size: 11px;
+                            line-height: 16px;
+                            color: #262626;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menu-map {
+                margin-top: 10px;
+                background: #e6e6e6;
+                height: 38px;
+
+                a {
+                    width: 150px;
+                    font-size: 13px;
+                    color: rgba(0, 0, 0, .8);
+
+                    i {
+                        margin-left: 5px;
+                        color: #616161;
+                    }
+                }
+            }
+        }
+
+        #all-menu-swich:checked+.all-menu {
+            background: #f2f2f2;
+        }
+
+        #all-menu-swich:checked~.inside-menu {
+            display: block;
+            max-width: 1200px;
+            width: 80%;
+        }
+    }
+
+}
+
+main {
+    background-color: #fff;
+
+    section.main-choices {
+        display: flex;
+        justify-content: center;
+
+
+        .product-card {
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: underline;
+                font-weight: 600;
+
+                img {
+                    width: 40px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            margin: 16px 24px;
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+
+        .card {
+            max-width: 25%;
+            padding: 0 12px;
+
+            @media (max-width: 1083px) {
+                max-width: 50%;
+            }
+
+            @media (max-width: 600px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .fa-brands {
+        font-size: 24px;
+        margin-right: 12px;
+    }
+
+    .edge-banner {
+        @media (max-width: 1083px) {
+            padding: 0 12px;
+            margin-bottom: 280px;
+        }
+
+        .edge-slide {
+            position: relative;
+
+            .main-text {
+                max-width: 500px;
+                top: 25%;
+                left: 5%;
+                background: #fff;
+
+                // position: absolute;
+                @media (max-width: 1600px) {
+                    max-width: 450px;
+                }
+
+                @media (max-width: 1500px) {
+                    width: 30%;
+                }
+
+                @media (max-width: 1400px) {
+                    width: 30%;
+                    top: 20%;
+                }
+
+                @media (max-width: 1083px) {
+                    max-width: 1035px;
+                    width: 98%;
+                    top: 110%;
+                    right: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                // @media (max-width: 900px) {
+                //     width: 95%;
+                //     top: 110%;
+                // }
+                @media (max-width: 859px) {
+                    width: 100%;
+                    top: 120%;
+                    box-shadow: unset;
+                }
+
+                @media (max-width: 500px) {
+                    top: 140%;
+                }
+
+                @media (max-width: 336px) {
+                    top: 160%;
+                }
+            }
+        }
+    }
+
+    // go to top
+
+    #myBtn {
+        display: none;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #f2f2f2;
+        color: #000;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        position: sticky;
+        left: 100%;
+        bottom: 20px;
+        margin-bottom: 3rem;
+        margin-right: 1rem;
+        @media (max-width: 859px) {
+            margin: 1rem;
+        }
+    }
+
+    #myBtn>i {
+        margin-right: 10px;
+    }
+
+    #myBtn:hover {
+        background-color: #555;
+    }
+
+
+}
+
+footer {
+    background: #F2F2F2;
+
+    .footer-main-nav {
+        ul {
+            width: 14%;
+            padding: 0 12px;
+
+            @media (max-width: 1083px) {
+                width: 30%;
+            }
+
+            @media (max-width: 800px) {
+                width: 45%;
+            }
+
+            @media (max-width: 539px) {
+                width: 100%;
+            }
+
+            h4 {
+                font-size: 15px;
+                color: #616161;
+                padding: 36px 0 4px 0;
+                font-weight: 600;
+            }
+
+            li {
+                font-size: 11px;
+                padding: 8px 0;
+
+                a {
+                    font-size: 11px;
+                    line-height: 16px;
+                    color: #616161;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .base {
+        padding: 30px 5% 16px;
+
+        ul {
+            li {
+                padding: 0 24px 4px 0;
+            }
+        }
+
+        @media (max-width: 1083px) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 30px 24px 16px;
+
+            .a-1083px {
+                margin: 8px 0 16px 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                ul {
+                    margin: 12px auto 0 0;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

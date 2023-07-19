@@ -1,0 +1,296 @@
+.swiper-wrapper {
+  padding-bottom: 50px;
+  background: #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 定位 */
+  position: relative;
+}
+
+.main-text {
+  /* 定位 */
+  /* position: absolute; */
+  padding: 48px;
+  /* width */
+  max-width: 700px;
+}
+
+@media (max-width: 1920px) {
+  .main-text {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1820px) {
+  .main-text {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1520px) {
+  .main-text {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .main-text {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 1083px) {
+  .main-text {
+    top: 90%;
+    width: 100vw;
+    max-width: 1000px;
+    background: #fff;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgba(0, 0, 0, .13), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, .11);
+  }
+}
+@media (max-width: 859px) {
+  .main-text {
+    padding: 24px 12px 16px;
+    width: 100vw;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+  }
+}
+@media (max-width: 336px) {
+  .main-text {
+    height: 290px;
+  }
+}
+
+.banner-title,
+.banner-body {
+  text-align: left;
+}
+
+.aside-link {
+  color: #000;
+  padding: 10px 12px;
+  margin-left: 10px;
+}
+@media (max-width: 1083px) {
+  .aside-link {
+    color: #0067b8;
+    padding: 10px 12px;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 336px) {
+  .aside-link {
+    margin-left: unset;
+  }
+}
+
+/* 1920- */
+.swiper-slide:nth-of-type(1) .main-text {
+  right: 8%;
+}
+@media (max-width: 1083px) {
+  .swiper-slide:nth-of-type(1) .main-text {
+    right: unset;
+  }
+}
+
+/* 1920- */
+.swiper-slide:nth-of-type(2) .main-text {
+  left: 8%;
+}
+
+@media (max-width: 1083px) {
+  .swiper-wrapper {
+    padding-bottom: 250px;
+    background: #fff;
+  }
+
+  /* .swiper-slide:nth-of-type(1) .main-text {
+    right: 8%;
+  }
+   */
+  .swiper-slide:nth-of-type(2) .main-text {
+    left: unset;
+    right: unset;
+  }
+}
+@media (max-width: 859px) {
+  .swiper-slide:nth-of-type(2) .main-text {
+    left: 0;
+  }
+}
+
+
+@media (max-width: 787px) {
+  .swiper-wrapper {
+    padding-bottom: 300px;
+  }
+}
+@media (max-width: 370px) {
+  .swiper-wrapper {
+    padding-bottom: 320px;
+  }
+}
+@media (max-width: 336px) {
+  .swiper-wrapper {
+    padding-bottom: 365px;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  /* right: var(--swiper-navigation-sides-offset,10px);
+    left: auto; */
+  top: 96%;
+  color: #000;
+  opacity: 1 !important;
+  z-index: 11;
+  font-size: 20px;
+}
+@media (max-width: 787px) {
+  .swiper-button-next,
+.swiper-button-prev {
+  top: 92%;
+}
+
+}
+
+.swiper-button-next {
+  right: 50%;
+  transform: translate(300%);
+}
+
+.swiper-button-prev {
+  left: 50%;
+  transform: translate(-300%);
+}
+
+/* 那兩個 > < */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 16px;
+}
+
+/* 老師的箭頭移動 */
+#my-swiper .swiper-button-next:hover::after {
+  transform: translate(0.5rem, 0);
+}
+
+#my-swiper .swiper-button-prev:hover::after {
+  transform: translate(-0.5rem, 0);
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-pagination {
+  line-height: 35px;
+}
+@media (max-width: 1800px) {
+  .swiper-pagination {
+    line-height: 33px;
+  }
+}
+@media (max-width: 1699px) {
+  .swiper-pagination {
+    line-height: 31px;
+  }
+}
+@media (max-width: 1599px) {
+  .swiper-pagination {
+    line-height: 29px;
+  }
+}
+@media (max-width: 1499px) {
+  .swiper-pagination {
+    line-height: 25px;
+  }
+}
+@media (max-width: 1399px) {
+  .swiper-pagination {
+    line-height: 37px;
+  }
+}
+@media (max-width: 1299px) {
+  .swiper-pagination {
+    line-height: 33px;
+  }
+}
+@media (max-width: 1199px) {
+  .swiper-pagination {
+    line-height: 27px;
+  }
+}
+@media (max-width: 1083px) {
+  .swiper-pagination {
+    line-height: 44px;
+  }
+}
+@media (max-width: 787px) {
+  .swiper-pagination {
+    line-height: 20px;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom,8px);
+    top: var(--swiper-pagination-top,auto);
+    top: 91%;
+    left: 0;
+    width: 100%;
+}
+@media (max-width: 500px) {
+  .swiper-pagination {
+    line-height: 10px;
+  }
+}
+}
+/* 兩個圈圈 */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  color: #171717;
+  margin: 0 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+/* 按下去的時候 */
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  background: #171717;
+
+}
+
+/* 圈圈的間距 */
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 16px);
+}
