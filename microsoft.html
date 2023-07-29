@@ -638,6 +638,8 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
+      //自動播放 增加逗點
+      autoplay: true,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -645,8 +647,35 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+          console.log(index, className);
+          if (index == 0){
+            // return不能換一行
+            //使用if index==0 讓停止、播放只出現一次 因為有0跟1 印一次就可以
+            return `
+            <span class="stop"></span>
+            <span class="play"></span>
+            <span class="${className}"></span>`;
+          } else {
+            //return 原來的東西
+            return `<span class="${className}"></span>`
+          }
+        },
       },
     });
+
+    stopBtn = document.querySelector('.stop');
+    playBtn = document.querySelector('.play');
+    stopBtn.addEventListener('click', () => {
+      swiper.autoplay.stop();
+      stopBtn.style.display = 'none';
+      playBtn.style.display = 'block';
+    });
+    playBtn.addEventListener('click', ()=> {
+      swiper.autoplay.start();
+      playBtn.style.display = 'none';
+      stopBtn.style.display = 'block';
+    })
   </script>
   <!-- go to top -->
   <script>

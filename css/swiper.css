@@ -213,6 +213,61 @@
 .swiper-pagination {
   line-height: 35px;
 }
+.play {
+  display: inline-block;
+  width: 19px;
+  height: 19px; 
+  background-image: url(../img/play.svg);
+  background-size: 100%;
+  position: absolute;
+  left: calc(50% - 110px);
+  top: calc(50% - 10px);
+  display: none;
+  cursor: pointer;
+}
+
+.stop {
+  display: inline-block;
+  width: 19px;
+  height: 19px; 
+  background-image: url(../img/pause.svg);
+  background-size: 100%;
+  position: absolute;
+  left: calc(50% - 110px);
+  top: calc(50% - 10px);
+  cursor: pointer;
+}
+@media (max-width: 1083px) {
+  .play, .stop {
+    top: calc(50% - 11px);
+  }
+}
+@media (max-width: 1000px) {
+  .play, .stop {
+    top: calc(50% - 10px);
+  }
+}
+@media (max-width: 787px) {
+  .play, .stop {
+    top: calc(50% - 31px);
+  }
+}
+@media (max-width: 600px) {
+  .play, .stop {
+    top: calc(50% - 29.5px);
+  }
+}
+@media (max-width: 600px) {
+  .play, .stop {
+    top: calc(50% - 27.5px);
+  }
+}
+@media (max-width: 400px) {
+  .play, .stop {
+    top: calc(50% - 25px);
+  }
+}
+
 @media (max-width: 1800px) {
   .swiper-pagination {
     line-height: 33px;
